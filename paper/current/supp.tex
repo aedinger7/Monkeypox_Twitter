@@ -1,0 +1,88 @@
+\documentclass[12pt]{article} %{{{
+
+% Figures
+\usepackage{graphicx}
+\graphicspath{{../../figs/}}
+
+% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\argmax}{\arg\!\max}
+
+% abbreviations
+\def\etal{\emph{et~al}.\ }
+\def\eg{e.g.,~}
+\def\ie{i.e.,~}
+\def\cf{cf.\ }
+\def\viz{viz.\ }
+\def\vs{vs.\ }
+
+% Refs
+\usepackage{biblatex}
+\addbibresource{bibliograpy.bib}
+
+\usepackage{url}
+
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+%\newcommand{\eqnref}[1]{\eqref{eq:#1}}
+%\newcommand{\thmref}[1]{Theorem~\ref{#1}}
+%\newcommand{\prgref}[1]{Program~\ref{#1}}
+%\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+%\newcommand{\clmref}[1]{Claim~\ref{#1}}
+%\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+%\newcommand{\ptyref}[1]{Property~\ref{#1}}
+
+% for quick author comments 
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{light-gray}{gray}{0.8}
+\def\del#1{ {\color{light-gray}{#1}} }
+\def\yy#1{\footnote{\color{red}\textbf{yy: #1}} }
+
+%}}}
+
+\begin{document} %{{{
+
+\title{Monkeypox Twitter Topical Mapping} %{{{
+\date{\today}
+\maketitle %}}} 
+\section{Processing Tweets}\label{sec:processing_tweets}
+
+Reading list of tweet id's: 254363 tweet ids in set \cite{thakur_2022}
+
+The tweet scraping is finished with 230163 tweets saved in: /l/mesur/aedinge/monkeypox_tweets_081222.bz2
+Tweets produced between 05/07/22 and 07/23/22
+Tweets harvested on 08/15/22
+
+Remove non-english tweets
+Remove tweets that don't contain keywords: "monkey pox", "monkeypox", "moneypox"
+Remove tweets beginning with RT (retweets)
+Remove words beginning with @ (usernames)
+Remove URL
+Remove non-ascii words and characters, &, <, >
+Remove extra white space
+
+Calculate number of words in each tweet and remove tweets with fewer than 3 words
+
+Take 0.1 sample of remaining tweets:
+
+some good maps:
+
+Probably best:
+/u/aedinge/monkeypox_twitter/results/mpox_post_40_500_7_0.4.html
+
+Original:
+/u/aedinge/monkeypox_twitter/results/mpox_post_15_30_25_0.1.html
+/u/aedinge/monkeypox_twitter/results/mpox_post_15_30_11_0.1.html
+
+
+
+
+
+
+\printbibliography{}
+    
+\end{document} %}}}
+
